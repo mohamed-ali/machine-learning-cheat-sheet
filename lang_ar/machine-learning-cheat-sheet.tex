@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%% editor.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%عل
+%
 % sample root file for the contributions of a "contributed volume"
 %
 % Use this file as a template for your own input.
@@ -8,7 +8,8 @@
 
 
 % RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[graybox, envcountchap, twocolumn]{styles/svmult}
+\documentclass[graybox, envcountchap]{styles/svmult}
+\usepackage{multicol}
 \usepackage{polyglossia}
 \setdefaultlanguage[locale=tunisia,numerals=maghrib]{arabic}
 \setotherlanguage{english}
@@ -65,8 +66,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-
-\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \include{titlepage}
 %\include{dedic}
@@ -74,11 +75,25 @@
 %\include{preface}
 %\include{acknow}
 
+\RLmulticolcolumns
+\begin{multicols}{2}
+
 \tableofcontents
-%\include{cblist}
-%\include{acronym}
+\end{multicols}
+
+\begin{english}
+\include{cblist}
+\include{acronym}
 %\include{notation}
 
+\end{english}
+
+
+\RLmulticolcolumns
+\include{notation_ar}
+
+\begin{multicols}{2}
+%\include{notation}
 
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\include{part}
@@ -119,5 +134,5 @@
 \printindex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\end{multicols}
 \end{document}
