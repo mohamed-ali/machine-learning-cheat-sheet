@@ -11,8 +11,10 @@
 
 من الصعوبة التّوصل إلي مجموعة وحيدة و ثابتة من الرموز لتغطية المجال الشاسع من البيانات \LR{(data)} و النماذج \LR{(models)} و الخوارزميات \LR{(algorithms)} التي نناقشها في هذا الكتيّب. علاوة على ذلك،  العلامات الرياضية المتفق عليها تختلف بين علم تعلّم الآلة \LR{(machine learning)} و علم الإحصاءات \LR{(statistics)}،  و بين الكتب والأوراق العلميّة المختلفة. مع ذلك، فقد حاولنا أن تكون الرموز المستعملة  متّسقة قدر الإمكان. فيما يلي نلخّص معظم الرموز المستخدمة, هذا لا ينفي أن بعض المقاطع الفرديّة في الكتيّب قد تعرض رموزا جديدة. إعلم أيضا أن بعض الرموز قد يكون لها معان مختلفة تبعا للسياق, رغم أننا سنحرص على تجنّب ذلك قدر الإمكان.
 
+\section*{مجموع الرموز الرياضية \hfill \LR{General math notation}}
+
 \begin{english}
-\section*{General math notation}
+
 
 \begin{longtable}{ll}
 \hline\noalign{\smallskip}
@@ -50,10 +52,14 @@ $\Psi(x)$ &  Digamma function,$Psi(x)=\dfrac{d}{dx}\log\Gamma(x)$\\
 $\mathcal{X}$ & A set from which values are drawn (e.g.,$\mathcal{X}=\mathbb{R}^D$)\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
 \end{longtable}
+\end{english}
+
+\section*{رموز علم الجبر الخطي \hfill \LR{Linear algebra notation}}
+
+خلال هذا الكتاب, سنستخدم حروف boldface الصغيرة للدلالة على النّاقلات(vectors) مثل $\vec{x}$ و حروف boldface العلوية لدلالة على المصفوفات مثل  $\vec{X}$. نشير إلى إدخلات مصفوفة \LR{(matrix entries)} بأحرف كبيرة غير جريئة، مثل $X_{ij}$.
 
 
-\section*{Linear algebra notation}
-We use boldface lower-case to denote vectors, such as $\vec{x}$, and boldface upper-case to denote matrices, such as $\vec{X}$. We denote entries in a matrix by non-bold upper case letters, such as $X_{ij}$.
+\begin{english}
 
 Vectors are assumed to be column vectors, unless noted otherwise. We use $(x_1,\cdots,x_D)$ to denote a column vector created by stacking $D$ scalars. If we write $\vec{X}=(\vec{x}_1,\cdots,\vec{x}_n)$, where the left hand side is a matrix, we mean to stack the $\vec{x}_i$ along the columns, creating a matrix.
 
@@ -82,8 +88,10 @@ $\vec{X}_{i,j}$ & Element $(i,j)$ of matrix $\vec{X}$ \\
 $\vec{x} \otimes \vec{y}$ & Tensor product of $\vec{x}$ and $\vec{y}$\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
 \end{longtable}
+\end{english}
 
-
+ 
+\begin{english}
 \section*{Probability notation}
 We denote random and fixed scalars by lower case, random and fixed vectors by bold lower case, and random and fixed matrices by bold upper case. Occasionally we use non-bold upper case to denote scalar random variables. Also, we use $p()$ for both discrete and continuous random variables
 
@@ -189,4 +197,4 @@ $z_{ij}$ & Latent component $j$ for case $i$\\
 
 \end{english}
 
-\twocolumn
+%\twocolumn
