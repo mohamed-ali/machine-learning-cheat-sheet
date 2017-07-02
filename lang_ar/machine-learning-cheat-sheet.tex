@@ -16,7 +16,15 @@
 \newfontfamily\arabicfont[Script=Arabic,Scale=1.1]{Amiri}
 \usepackage{titlesec}
 \usepackage{fancyhdr}
-\pagenumbering{gobble}
+\pagestyle{fancy}
+% Clear the header and footer
+\fancyhead{}
+\fancyhead{\rightmark}
+\fancyfoot{}
+% Set the right side of the footer to be the page number
+\fancyfoot[R]{\thepage}
+
+
 %\titleformat{\section}
 %    [block]{\normalfont\bfseries\Large}{\rlap{\thesection}}{0em}
 %    {\hspace{.05\linewidth}\begin{minipage}[t]{.95\textwidth}}[\end{minipage}]
@@ -73,6 +81,7 @@
 
 \begin{document}
 \frontmatter
+\pagenumbering{arabic}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \include{titlepage}
@@ -89,7 +98,7 @@
 
 \begin{english}
 \include{cblist}
-\include{acronym}
+%\include{acronym}
 %\include{notation}
 
 \end{english}
@@ -103,7 +112,7 @@
 
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\include{part}
-%\include{chapterIntroduction}
+\include{chapterIntroduction}
 %\include{chapterProbability}
 %\include{chapterGenerativeModels}
 %\include{chapterMVN}

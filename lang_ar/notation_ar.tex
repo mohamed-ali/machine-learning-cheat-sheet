@@ -29,7 +29,7 @@ $a \vee b$ & logical OR\\
 $\neg a$ & logical NOT\\
 $\mathbb{I}(x)$ & Indicator function, $\mathbb{I}(x)=1$ if x is true, else $\mathbb{I}(x)=0$\\
 $\infty$ & Infinity\\
-$\rightarrow$ & Tends towards, e.g., $n \rightarrow \infty$\\
+$\rightarrow$ & Tends towards, e.g., $n \rightarrow \infty$\\س
 $\propto$ &Proportional to, so $y = ax$ can be written as $y \propto x$\\
 $\abs{x}$ & Absolute value\\
 $\abs{\mathcal{S}}$ & Size (cardinality) of a set\\
@@ -58,10 +58,8 @@ $\mathcal{X}$ & A set from which values are drawn (e.g.,$\mathcal{X}=\mathbb{R}^
 
 خلال هذا الكتاب, سنستخدم حروف boldface الصغيرة للدلالة على النّاقلات(vectors) مثل $\vec{x}$ و حروف boldface العلوية لدلالة على المصفوفات مثل  $\vec{X}$. نشير إلى إدخلات مصفوفة \LR{(matrix entries)} بأحرف كبيرة غير جريئة، مثل $X_{ij}$.
 
-
+سنعتبر كل النّاقلات (vectors) ناقلات عمود \LR{(column vectors)}, مالم يذكر خلاف ذلك في السياق. نستخدم $(x_1,\cdots,x_D)$ للدّلالة على متجه عمود تم إنشاؤه بواسطة تكديس $D$ أعداد \LR{(stacking $D$ scalars)}. إذا كتبنا $\vec{X}=(\vec{x}_1,\cdots,\vec{x}_n)$, حيث الجانب الأيسر هو مصفوفة(matrix) , فإننا نقصد تكديس  $\vec{x}_i$ على طول الأعمدة لخلق مصفوفة(matrix). 
 \begin{english}
-
-Vectors are assumed to be column vectors, unless noted otherwise. We use $(x_1,\cdots,x_D)$ to denote a column vector created by stacking $D$ scalars. If we write $\vec{X}=(\vec{x}_1,\cdots,\vec{x}_n)$, where the left hand side is a matrix, we mean to stack the $\vec{x}_i$ along the columns, creating a matrix.
 
 \begin{longtable}{ll}
 \hline\noalign{\smallskip}
@@ -90,10 +88,11 @@ $\vec{x} \otimes \vec{y}$ & Tensor product of $\vec{x}$ and $\vec{y}$\\
 \end{longtable}
 \end{english}
 
- 
+\section*{رموز علم الإحتمال \hfill \LR{Probability notation}}
+
+نرمز إلى الأعداد العشوائية و الثابتة  \LR{(random and fixed scalars)} بخط صغير \LR{(lower case)}, و الناقلات العشوائية و الثابتة \LR{(random and fixed vectors)} بالحروف الصغيرة الجريئة\LR{(bold lower case)} و المصفوفات العشوائية و الثابتة \LR{(random and fixed matrices)} بالحروف الجريئة العلوية \LR{(bold upper case)}. أحيانا نستخدم الحروف العلوية غير الجريئة \LR{(non-bold upper case)} لدلالة على المتغيرات العددية العشوائية \LR{(scalar random variables)}. نستخدم, أيضا, $p()$ لكل من المتغيرات العشوائية المنفصلة و المستمرة \LR{(discrete and continuous random variables)}. 
+
 \begin{english}
-\section*{Probability notation}
-We denote random and fixed scalars by lower case, random and fixed vectors by bold lower case, and random and fixed matrices by bold upper case. Occasionally we use non-bold upper case to denote scalar random variables. Also, we use $p()$ for both discrete and continuous random variables
 
 \begin{longtable}{ll}
 \hline\noalign{\smallskip}
@@ -140,8 +139,11 @@ $\nu$ & Degrees of freedom parameter\\
 Z & Normalization constant of a probability distribution\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
 \end{longtable}
+\end{english}
 
-\section*{Machine learning/statistics notation}
+\section*{رموز علم تعلّم الآلة و الإحصاءات \hfill \LR{Machine learning/statistics notation}}
+
+\begin{english}
 In general, we use upper case letters to denote constants, such as $C, K, M, N, T$, etc. We use lower case letters as dummy indexes of the appropriate range, such as $c=1:C$ to index classes, $i=1:M$ to index data cases, $j=1:N$ to index input features, $k=1:K$ to index states or clusters, $t=1:T$ to index time, etc.
 
 We use $x$ to represent an observed data vector. In a supervised problem, we use $y$ or $\vec{y}$ to represent the desired output label. We use $\vec{z}$ to represent a hidden variable. Sometimes we also use $q$ to represent a hidden discrete variable.

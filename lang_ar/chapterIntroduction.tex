@@ -1,25 +1,32 @@
-\chapter{تمهيد \LR{Introduction}}
+\chapter{تمهيد \hfill \LR{Introduction}}
+\section{أنواع تعلّم الآلة \hfill \LR{Types of machine learning}}
 
 \begin{english}
-\section{Types of machine learning}
 \begin{equation}\nonumber
 \begin{cases}
-\text{Supervised learning} \begin{cases} \text{Classification} \\ \text{Regression} \end{cases}\\
+\text{Supervised learning \RL{التعلم الخاضع للإشراف}} \begin{cases} \text{Classification} \\ \text{Regression} \end{cases}\\
 \text{Unsupervised learning} \begin{cases} \text{Discovering clusters} \\ \text{Discovering latent factors} \\ \text{Discovering graph structure} \\ \text{Matrix completion} \end{cases}\\
 \end{cases}
 \end{equation}
+\end{english}
 
 
-\section{Three elements of a machine learning model}
+\section{المكونات الثلاثة لنماذج تعلّم الآلة}
 
-\textbf{Model = Representation + Evaluation + Optimization}\footnote{Domingos, P. A few useful things to know about machine learning. Commun. ACM. 55(10):78–87 (2012).}
+النوذج\LR{(Model)} = التمثيل\LR{(Representation)} + التقييم \LR{(Evaluation)}+ التحسين\LR{(Optimization)} 
+\LR{\footnote{Model = Representation + Evaluation + Optimization. Domingos, P. A few useful things to know about machine learning. Commun. ACM. 55(10):78–87 (2012).}}
 
+في ما يلي سيقع تفسير كل مكون من هذه المكونات الثلاثة على حدا. 
 
-\subsection{Representation}
+\subsection{التمثيل \hfill \LR{Representation}}
+
+\begin{english}
 In supervised learning, a model must be represented as a conditional probability distribution $P(y|\vec{x})$(usually we call it classifier) or a decision function $f(x)$. The set of classifiers(or decision functions) is called the hypothesis space of the model. Choosing a representation for a model is tantamount to choosing the hypothesis space that it can possibly learn.
+\end{english}
 
 
-\subsection{Evaluation}
+\subsection{التقييم \hfill \LR{Evaluation}}
+\begin{english}
 In the hypothesis space, an evaluation function (also called objective function or risk function) is needed to distinguish good classifiers(or decision functions) from bad ones.
 
 
@@ -84,9 +91,10 @@ SRM(Structural risk minimization)
 \min\limits _{f \in \mathcal{F}} R_{\mathrm{srm}}(f)=\min\limits _{f \in \mathcal{F}} \dfrac{1}{N}\sum\limits_{i=1}^{N} L\left(y_i,f(x_i)\right) +\lambda J(f)
 \end{equation}
 \end{definition}
+\end{english}
 
-
-\subsection{Optimization}
+\subsection{التقييم \hfill \LR{Optimization}}
+\begin{english}
 Finally, we need a \textbf{training algorithm}(also called \textbf{learning algorithm}) to search among the classifiers in the the hypothesis space for the highest-scoring one. The choice of optimization technique is key to the \textbf{efficiency} of the model.
 
 
@@ -132,4 +140,5 @@ Common types of cross-validation:
 
 \subsection{Model selection}
 When we have a variety of models of different complexity (e.g., linear or logistic regression models with different degree polynomials, or KNN classifiers with different values ofK), how should we pick the right one? A natural approach is to compute the \textbf{misclassification rate} on the training set for each method.
+
 \end{english}
